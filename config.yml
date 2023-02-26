@@ -1,0 +1,70 @@
+baseURL: 'https://mystic-slice.github.io/'
+defaultContentLanguage: en
+languageCode: en
+enableEmoji: true
+title: Ashwath 〣 MysticSlice
+theme: PaperMod
+
+env: production
+
+enableRobotsTXT: true
+
+sitemap:
+  changefreq: Weekly
+  priority: 0.5
+  
+params:
+  showToc: false
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  hideMeta: false
+  profileMode:
+    enabled: true
+    title: Ashwath V A
+    subtitle: Computer Science Student
+
+  socialIcons:
+    - name: linkedin
+      url: 'https://www.linkedin.com/in/ashwath-v-a-5a17a7204/'
+    - name: Github
+      url: 'https://github.com/Mystic-Slice'
+    - name: Email
+      url: 'mailto:vaashwath@gmail.com'
+    - name: twitter
+      url: 'https://twitter.com/AshwathVA'
+    - name: discord
+      url: 'https://discord.com/users/791297664801177600'
+    # - name: codeforces
+    #   url: 'https://codeforces.com/profile/MysticSlice'
+    # - name: codechef
+    #   url: 'https://www.codechef.com/users/mysticslice'
+
+  cover:
+    hiddenInList: false # hide on list pages and home
+    hiddenInSingle: false # hide on single page
+    responsiveImages: false
+
+hideDescriptionInList: false
+
+menu:
+  main:
+    # - identifier: home
+    #   name: Home
+    #   url: /
+    #   weight: 1
+
+    - identifier: about
+      name: About
+      url: /about
+      weight: 2
+
+    # - identifier: projects
+    #   name: Projects
+    #   url: /projects
+    #   weight: 3
+
+    # - identifier: blogs
+    #   name: Blogs
+    #   url: /blogs
+    #   weight: 4
