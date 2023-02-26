@@ -9,4 +9,4 @@ I used to be really into competitive programming, but I've since shifted my focu
 
 I am really enthusiastic about open-source development. I got to participate in Google Summer of Code 2021 and contributed to the MuseScore project. Right now, I am working on [Heat](https://github.com/helmholtz-analytics/heat), a distributed high-performance computation library.
 
-If you share my interests or just want to talk, please feel free to reach out to me. :)
+If you share my interests or just want to talk, please feel free to reach out to me. :) 
