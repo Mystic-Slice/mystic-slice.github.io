@@ -21,7 +21,9 @@ Heat is a scientific computing library focussed on high performance data analyti
 ## DCSR_matrix
 [Compressed Sparse Row](https://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_row_(CSR,_CRS_or_Yale_format)) is one of the most popular sparse representation formats. It was chosen as the first format to be supported by the `heat.sparse` module due to its simplicity and support in the PyTorch library. The CSR formats holds information only about the non-zero elements in the matrix. The `DCSR_matrix` splits the input object among the different process and deals with each chunk as an independent csr matrix. For most operations like elementwise addition, multiplication, etc..., the global information is unnecessary. And so, each process can operate independent of the others. This makes it very efficient to work with because there is not communication overhead. 
 
-An example working with `DCSR_matrix` split along axis 0 across two processes:
+An example working with `DCSR_matrix` split along axis 0 across two processes
+
+Code:
 ```py
 import heat as ht
 import torch
@@ -38,7 +40,7 @@ print(f"Sparse matrix: {sparse_matrix}")
 print(f"Rank: {ht.MPI_WORLD.Get_rank()}, Local data: {sparse_matrix.larray}")
 print(f"Local Data (in dense form): {sparse_matrix.larray.to_dense()}")
 ```
-
+Output:
 ```
 >>> mpirun -n 2 python3 example.py
 Sparse matrix: (indptr: tensor([0, 2, 2, 3, 5, 6]), 
