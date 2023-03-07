@@ -57,14 +57,14 @@ menu:
     - identifier: about
       name: About
       url: /about
+      weight: 1
+
+    - identifier: blogs
+      name: Blogs
+      url: /blogs/
       weight: 2
 
     # - identifier: projects
     #   name: Projects
     #   url: /projects
     #   weight: 3
-
-    # - identifier: blogs
-    #   name: Blogs
-    #   url: /blogs
-    #   weight: 4
