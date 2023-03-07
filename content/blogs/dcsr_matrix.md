@@ -139,7 +139,7 @@ This project is the first step in building a fully-featured sparse module for He
 
 For me personally, this project was fun. I learnt a lot about distributed computing, unit testing and software design during the course of this project. I also really enjoyed working with the team at HeAT. I look forward to seeing the future developments in the HeAT framework and in particular the sparse module.
 
-## Resources:
+## Resources
 1. HeAT - https://github.com/helmholtz-analytics/heat
 2. Project PR - https://github.com/helmholtz-analytics/heat/pull/1028
 
