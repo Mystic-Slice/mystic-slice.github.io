@@ -21,7 +21,7 @@ Heat is a scientific computing library focussed on high performance data analyti
 ## DCSR_matrix
 [Compressed Sparse Row](https://en.wikipedia.org/wiki/Sparse_matrix#Compressed_sparse_row_(CSR,_CRS_or_Yale_format)) is one of the most popular sparse representation formats. It was chosen as the first format to be supported by the `heat.sparse` module due to its simplicity and support in the PyTorch library. The CSR formats holds information only about the non-zero elements in the matrix. The `DCSR_matrix` splits the input object among the different process and deals with each chunk as an independent csr matrix. For most operations like elementwise addition, multiplication, etc..., the global information is unnecessary. And so, each process can operate independent of the others. This makes it very efficient to work with because there is not communication overhead. 
 
-An example working with `DCSR_matrix` split along axis 0 across two processes
+An example working with `DCSR_matrix` split along axis 0 across two processes.
 
 Code:
 ```py
@@ -137,10 +137,10 @@ Right now, the foundation of the class is complete. The addition of more element
 
 This project is the first step in building a fully-featured sparse module for HeAT. Furthur development of this project really has the potential to make a significant impact in the field of scientific computing. And I am really glad I could make a small contribution in that direction.
 
-For me personally, this project was fun. I learnt a lot about distributed computing, unit testing and software design during the course of this project. I also really enjoyed working with the team at HeAT. I look forward to seeing the future developments in the HeAT framework and in particular the sparse module.
+For me personally, this project was fun. I learnt a lot about distributed computing, unit testing and software design during the course of this project. I also really enjoyed working with the team at HeAT. I look forward to seeing the future developments in the HeAT framework, especially, the sparse module.
 
 ## Resources
 1. HeAT - https://github.com/helmholtz-analytics/heat
 2. Project PR - https://github.com/helmholtz-analytics/heat/pull/1028
 
-Thank you for reading! Feel free to share your thoughts about this projects in the comments. Also, don't hesitate to get in touch with me.
+Thank you for reading! Feel free to share your thoughts about this project in the comments. Also, don't hesitate to get in touch with me.
