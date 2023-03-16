@@ -108,7 +108,8 @@ The structure of sparse storage format entails a bit of extra computation that h
 
 The comparison is done between the dense array format (`DNDarray`) and the new sparse storage format (`DCSR_matrix`) for array sizes $(1000 \times 1000) \to (10000 \times 10000)$. The sparsity is fixed at $0.999$ for the experiment. The sparsity might seem extreme but it is not far from what is seen in most real life data like Netflix User x Movie watch data, Youtube Video Analytics, Amazon Customer data, Sensor input data from an IoT network, etc...
 
-![](/images/dcsr_matrix/size_comparison_dcsr_matrix.png)
+<img src="/images/dcsr_matrix/size_comparison_dcsr_matrix.png" style="display: block;margin: auto;"/><p style="margin:10px;"></p>
+
 
 The graph clearly shows the differences in performance of the two formats. For matrix sizes less 4000, the extra computation makes `DCSR_matrix` less efficient but we can see the huge difference in computation when handling larger matrices.
 
@@ -121,9 +122,22 @@ $$Sparsity = \frac{Number\ of\ insignificant\ elements\ (Usually\ 0s)}{Total\ nu
 
 The sparse storage formats are more efficient with increased sparsity. To show this, in the next experiment, the size of the matrix is set at $(10000 \times 10000)$ and the sparsity is varied through the values $0.99, 0.999, 0.9999$ and $0.99999$.
 
-![](/images/dcsr_matrix/sparsity_comparison_dcsr_matrix.png)
+<img src="/images/dcsr_matrix/sparsity_comparison_dcsr_matrix.png" style="display: block;margin: auto;"/><p style="margin:10px;"></p>
 
 This shows that even at 90% sparsity, the dense format performs better. For the 99% sparsity, the two performances are almost the same (I suspect for larger matrices, this threshold will be even lower). As the sparsity increases, the time taken decreases exponentially for the sparse format while it stays the same for dense (as expected).
+
+## Scaling
+In this project, we focused on two important aspects: sparseness of the matrix and distribution across processes. In the previous section, we explored sparsity, while in this section, we will try to see how well the data structure scales with increasing number of computational nodes. To test this, **strong-scaling** tests were conducted on the Jülich's **HDF-ML** clusters (special thanks to Fabian!). In strong scaling, the workload is kept constant, and the number of compute nodes is increased to observe the effect.
+
+For this experiment, the matrix size was kept fixed at $(25000 \times 25000)$. The runtimes of a dense matrix with those of sparse matrices of varying sparsity for a simple element-wise addition operation were recorded. The following graph shows the comparative runtimes between the two types of matrices. 
+
+<img src="/images/dcsr_matrix/strong_scaling_all.png" style="display: block;margin: auto;"/><p style="margin:10px;"></p>
+
+
+Even at 99% sparsity, the sparse version of the matrix beats the dense version by a huge margin.
+<img src="/images/dcsr_matrix/strong_scaling_dense_sparse.png" style="display: block;margin: auto;"/><p style="margin:10px;"></p>
+
+It can be seen from these graphs that the new sparse format scales in a similar manner to the dense format. This means sparse matrices can be used in distributed computing without incurring any handicap in terms of performance due to distribution.
 
 ## Other miscellaneous aspects of development
 1. **SciPy style interface** - SciPy has a very well established module that supports different types of sparse matrix formats. It is very popular among scientists who require easy-to-use libraries in their research. The only place where it falls short is the absence of support for parallel computation. When the size of data grows beyond a certain limit, SciPy becomes almost unusable. This is actually one of the core problems that HeAT aims to solve. In this module, the APIs are made to closely resemble the SciPy module APIs to ensure smooth migration of working code from SciPy to HeAT to run in high-performance computation clusters.
@@ -137,7 +151,7 @@ Right now, the foundation of the class is complete. The addition of more element
 
 This project is the first step in building a fully-featured sparse module for HeAT. Furthur development of this project really has the potential to make a significant impact in the field of scientific computing. And I am really glad I could make a small contribution in that direction.
 
-For me personally, this project was fun. I learnt a lot about distributed computing, unit testing and software design during the course of this project. I also really enjoyed working with the team at HeAT. I look forward to seeing the future developments in the HeAT framework, especially, the sparse module.
+For me personally, this project was fun. I learnt a lot about distributed computing, unit testing and software design during the course of this project. I also really enjoyed working with the team at HeAT, especially Claudia. I look forward to seeing the future developments in the HeAT framework, especially, the sparse module.
 
 ## Resources
 1. HeAT - https://github.com/helmholtz-analytics/heat
