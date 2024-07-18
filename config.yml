@@ -64,10 +64,10 @@ menu:
       url: /blogs/
       weight: 2
 
-    # - identifier: projects
-    #   name: Projects
-    #   url: /projects
-    #   weight: 3
+    - identifier: resume
+      name: Resume
+      url: /files/resume_ashwath.pdf
+      weight: 3
 
 markup:
   goldmark:

@@ -3,10 +3,10 @@ title: 'About Me'
 draft: false
 ---
 
-Hi! I'm Ashwath, a Computer Science student at Amrita Vishwa Vidyapeetham. I am interested in Deep Learning. My current research is focused on the application of Deep Learning in Computer Vision.
+Hi! I'm Ashwath, a Computer Science graduate from Amrita Vishwa Vidyapeetham, soon to pursue an MSCS with AI specialization at USC. My passion lies in understanding and building AI systems, with a particular focus on explainability of AI systems.
 
-I used to be really into competitive programming, but I've since shifted my focus to other areas of interest. I am always eager to explore new technologies and concepts. I have recently been learning a little bit of Rust programming.
+My journey has led me from competitive programming, app development, and web development to deep learning in computer vision, and now to the broader field of AI. I'm excited about the potential of AI integration in software products and aim to build a career as an AI/ML engineer or AI-focused software developer.
 
-I am really enthusiastic about open-source development. I got to participate in Google Summer of Code 2021 and contributed to the MuseScore project. Right now, I am working on [Heat](https://github.com/helmholtz-analytics/heat), a distributed high-performance computation library.
+I'm an enthusiastic open-source contributor, having participated in Google Summer of Code 2021 with the MuseScore project. I have also worked on Heat, a distributed high-performance computation library.
 
-If you share my interests or just want to talk, please feel free to reach out to me. :) 
+Always eager to explore new technologies, I've recently been exploring frameworks like LangChain for building AI integrated software products. If you share similar interests or just want to chat about AI and tech, feel free to reach out! :)
