@@ -71,7 +71,7 @@ menu:
 
     - identifier: resume_software
       name: Resume_Software
-      url: /files/resume_ashwath_ai.pdf
+      url: /files/resume_ashwath_software.pdf
       weight: 3
 
 markup:
