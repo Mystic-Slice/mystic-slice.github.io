@@ -2,9 +2,10 @@
 title: "Distributed Compressed Sparse Row - Project Blog"
 description: "Sparse storage format in the new sparse module of HeAT"
 summary: "This blog talks about Distributed Compressed Sparse Row matrix, a sparse storage format in the new sparse module of HeAT, a data analytics library for high-performance computing."
+descriptionOnCover: false
 cover:
     image: "/images/dcsr_matrix/example_dcsr_matrix.png"
-tags: ["Python", "Distributed Computing", "HeAT", "Opensource"]
+tags: ["Blog", "Python", "Distributed Computing", "HeAT", "Opensource"]
 date: 2023-03-07T20:52:10+05:30
 draft: false
 math: true
