@@ -16,7 +16,7 @@ sitemap:
 params:
   showToc: false
   TocOpen: false
-  ShowBreadCrumbs: true
+  ShowBreadCrumbs: false
   ShowCodeCopyButtons: true
   hideMeta: false
   profileMode:
