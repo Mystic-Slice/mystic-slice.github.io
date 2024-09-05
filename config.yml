@@ -2,7 +2,7 @@ baseURL: 'https://mystic-slice.github.io/'
 defaultContentLanguage: en
 languageCode: en
 enableEmoji: true
-title: Ashwath 〣 MysticSlice
+title: Ashwath V A 〣 MysticSlice
 theme: PaperMod
 
 env: production
@@ -21,8 +21,10 @@ params:
   hideMeta: false
   profileMode:
     enabled: true
-    title: Ashwath V A
-    subtitle: Computer Science Student
+    name: Ashwath Vaithinathan Aravindan
+    shortname: Ashwath V A
+    shortDescription: Computer Science Student
+    currentOrg: University of Southern California
 
   socialIcons:
     - name: linkedin
@@ -31,14 +33,16 @@ params:
       url: 'https://github.com/Mystic-Slice'
     - name: Email
       url: 'mailto:vaashwath@gmail.com'
-    - name: twitter
-      url: 'https://twitter.com/AshwathVA'
-    - name: discord
-      url: 'https://discord.com/users/791297664801177600'
-    # - name: codeforces
-    #   url: 'https://codeforces.com/profile/MysticSlice'
-    # - name: codechef
-    #   url: 'https://www.codechef.com/users/mysticslice'
+    # - name: twitter
+    #   url: 'https://twitter.com/AshwathVA'
+    # - name: discord
+    #   url: 'https://discord.com/users/791297664801177600'
+    - name: googlescholar
+      url: 'https://scholar.google.com/citations?user=wtjOdIQAAAAJ&hl=en'
+    - name: codeforces
+      url: 'https://codeforces.com/profile/MysticSlice'
+    - name: codechef
+      url: 'https://www.codechef.com/users/mysticslice'
 
   cover:
     hiddenInList: false # hide on list pages and home
@@ -59,15 +63,20 @@ menu:
       url: /about
       weight: 1
 
+    - identifier: projects
+      name: Projects
+      url: /projects/
+      weight: 2
+
     - identifier: blogs
       name: Blogs
       url: /blogs/
-      weight: 2
+      weight: 3
 
     - identifier: resume
       name: Resume
       url: /files/resume_ashwath.pdf
-      weight: 3
+      weight: 4
 
 markup:
   goldmark:
