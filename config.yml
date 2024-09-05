@@ -64,14 +64,9 @@ menu:
       url: /blogs/
       weight: 2
 
-    - identifier: resume_ai
-      name: Resume_AI
-      url: /files/resume_ashwath_ai.pdf
-      weight: 3
-
-    - identifier: resume_software
-      name: Resume_Software
-      url: /files/resume_ashwath_software.pdf
+    - identifier: resume
+      name: Resume
+      url: /files/resume_ashwath.pdf
       weight: 3
 
 markup:
