@@ -47,7 +47,7 @@ The unified textual representation of the artwork is then compared with the repr
 
 ### Other Technical Details
 
-I built the frontend of the application using Next.js (React, Tailwind, shadcn). I built the AI workflow using LlamaIndex, Qdrant, OpenAI API, Huggingface and Kindo AI API (to access GPT-4o). The backend which connnects the frontend to the AI workflow was built by my teammate Aditya Sharma, using Flask, Firebase and MongoDb. 
+I built the frontend of the application using Next.js (React, Tailwind, shadcn). I built the AI workflow using LlamaIndex, Qdrant, OpenAI API, Huggingface and Kindo AI API (to access GPT-4o). The backend which connects the frontend to the AI workflow was built by my teammate Aditya Sharma, using Flask, Firebase and MongoDb. 
 
 ## Future Extension
 I could think of a few ways the app could be extended in the future:
