@@ -58,7 +58,8 @@ I could think of a few ways the app could be extended in the future:
 
 ## Code
 The hackathon project page is: [ArtWave](https://devpost.com/software/artwave).
-The code for the entire application can be found at:
+
+The code for the entire application can be found in these repositories:
 - [Frontend](https://github.com/Mystic-Slice/artwave-frontend)
 - [Backend](https://github.com/Mystic-Slice/artwave-backend)
 
