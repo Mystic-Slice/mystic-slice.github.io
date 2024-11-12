@@ -6,6 +6,7 @@ cover:
     image: "images/smartvidindex/cover.png"
 tags: ["Project", "Python", "Langchain", "Qdrant", "OpenAI", "Ollama", "Webapp"]
 draft: false
+comments: true
 math: true
 ---
 
