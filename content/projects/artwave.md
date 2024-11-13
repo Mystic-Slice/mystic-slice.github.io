@@ -63,10 +63,10 @@ The code for the entire application can be found in these repositories:
 - [Frontend](https://github.com/Mystic-Slice/artwave-frontend)
 - [Backend](https://github.com/Mystic-Slice/artwave-backend)
 
-This project is one of the most impactful uses of generative AI I’ve developed so far. It was amazing to see how far LLMs could (or maybe pretend to) understand and describe human art. I was also pleasantly surprised by how quickly we brought this project together. The entire application came together in less than 24 hours.
+I had a lot of fun working on this project with my team [Aditya Sharma](https://www.linkedin.com/in/adityasharma98/), [Prathmesh Lonkar](https://www.linkedin.com/in/prathmesh-lonkar/) and [Pratik Dilip Dhende](https://www.linkedin.com/in/pratik-dhende/). This project is one of the most impactful uses of generative AI I've developed so far. It was amazing to see how far LLMs could (or maybe pretend to) understand and describe human art. I was also pleasantly surprised by how quickly we brought this project together. The entire application came together in less than 24 hours.
 
 <div style="display: block; width: 100%; justify-items: center;">
 <img src="/images/artwave/team_pic.jpg" style="display: block;margin: auto;"/><em>My team at the hackthon</em>
 </div>
 
-While I built this project quickly for the hackathon, I believe that the underlying idea has a lot of potential and I am excited to see where it goes in the future. If you believe in this project’s potential and would like to collaborate on its development, please reach out! I’d also love to hear any ideas you might have for enhancing ArtWave.
+While I built this project quickly for the hackathon, I believe that the underlying idea has a lot of potential and I am excited to see where it goes in the future. If you believe in this project's potential and would like to collaborate on its development, please reach out! I'd also love to hear any ideas you might have for enhancing ArtWave.
