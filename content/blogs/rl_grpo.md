@@ -20,7 +20,7 @@ Github repo: https://github.com/Mystic-Slice/rl-grpo-countdown
 
 # Background
 ## GRPO
-GRPO (Group Relative Policy Optimization) is a reinforcement-learning algorithm used to training the latest reasoning models. It was first popularized by [DeepSeek-R1](https://arxiv.org/abs/2501.12948). This algorithm removes the requirement for manual verification which is usually a huge bottleneck in training methods like RLHF or PPO. However, the scope of use for this algorithm is limited to tasks where responses can be verified programmatically (usually math, coding, MCQs, etc...). There are some ways to overcome this limitation (like using LLM-as-a-Judge to grade each response) but still not quite applicable to an arbitrary dataset.
+Group Relative Policy Optimization is a reinforcement-learning algorithm used to training the latest reasoning models. It was first popularized by [DeepSeek-R1](https://arxiv.org/abs/2501.12948). This algorithm removes the requirement for manual verification which is usually a huge bottleneck in training methods like RLHF or PPO. However, the scope of use for this algorithm is limited to tasks where responses can be verified programmatically (usually math, coding, MCQs, etc...). There are some ways to overcome this limitation (like using LLM-as-a-Judge to grade each response) but still not quite applicable to an arbitrary dataset.
 
 I use the [implementation of GRPO in the trl library](https://huggingface.co/docs/trl/main/en/grpo_trainer) which, more specifically, is the improved version of GRPO proposed by the [DAPO paper](https://arxiv.org/abs/2503.14476).
 
