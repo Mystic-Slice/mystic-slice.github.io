@@ -14,13 +14,13 @@ showtoc: true
 ---
 
 # Introduction
-I have been meaning to learn RLVR for a while now. During my internship at IBM, I had an opportunity to work on a project that involved fine-tuning language models with RLVR. It was the first time I finetuned LLMs and was a great learning experience. I completed my internship interested in gaining a deeper understanding of the algorithm. I want to see how far I can push the reasoning capabilities when training an LLM with this algorithm. I write this blog to document a set of experiments I ran on a toy task, along with the results and takeaways.
+I have been meaning to learn the Reinforcement Learning with Verifiable Rewards (RLVR) training technique to finetune LLMs for a while now. During my internship at IBM, I had an opportunity to work on a project that involved fine-tuning language models with RLVR. It was the first time I finetuned LLMs and was a great learning experience. After my internship, I remained interested in gaining a deeper understanding of the algorithm. I wanted to see how far I can push the reasoning capabilities when training an LLM with this algorithm. I write this blog to document a set of experiments I ran on a toy task, along with the results and takeaways.
 
 Github repo: https://github.com/Mystic-Slice/rl-grpo-countdown
 
 # Background
 ## GRPO
-GRPO (Group Relative Policy Optimization) is a reinforcement-learning algorithm used to training the latest reasoning model. It was first popularized by [DeepSeek-R1](https://arxiv.org/abs/2501.12948). This algorithm removes the requirement for manual verification which is usually a huge bottleneck in training methods like RLHF or PPO. However, the scope of use for this algorithm is limited to tasks where responses can be verified programmatically (usually math, coding, MCQs, etc...). There are some ways to overcome this limitation (like using LLM-as-a-Judge to grade each response) but still not quite applicable to an arbitrary dataset.
+GRPO (Group Relative Policy Optimization) is a reinforcement-learning algorithm used to training the latest reasoning models. It was first popularized by [DeepSeek-R1](https://arxiv.org/abs/2501.12948). This algorithm removes the requirement for manual verification which is usually a huge bottleneck in training methods like RLHF or PPO. However, the scope of use for this algorithm is limited to tasks where responses can be verified programmatically (usually math, coding, MCQs, etc...). There are some ways to overcome this limitation (like using LLM-as-a-Judge to grade each response) but still not quite applicable to an arbitrary dataset.
 
 I use the [implementation of GRPO in the trl library](https://huggingface.co/docs/trl/main/en/grpo_trainer) which, more specifically, is the improved version of GRPO proposed by the [DAPO paper](https://arxiv.org/abs/2503.14476).
 
