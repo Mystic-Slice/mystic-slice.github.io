@@ -37,7 +37,7 @@ The model was rewarded based on two binary criteria:
 2. **Format Correctness:** Response is formatted in two sections enclosed within the \<reasoning> and \<answer> XML tags.
 The Answer Correctness reward is weighted twice compared to Format Correctness.
 <!-- prompt used -->
-## Choice of model & Base performance
+## Base Model
 The model being trained is [Qwen/Qwen3-4B-Instruct-2507](https://huggingface.co/Qwen/Qwen3-4B-Instruct-2507), the largest among the recently released models I could train with my compute availability. This model is also not a 'thinking' model and so its responses are relatively concise. I believe this also made it easier for the model to learn the context window constraints a little easier. This model scored 71% in answer correctness and 52% in format correctness. This is the score to beat.
 
 # Experiments
@@ -329,7 +329,7 @@ In this experiment, the entropy was better behaved (peaks at ~1.0 with a more st
 |:---:|
 | *Accuracy Reward during training - Improved Config* |
 
-## Pushing it further
+## Pushing It Further
 A couple of ideas were considered to improve it further: 
 1. KL divergence - The Grad Norm still showed a lot of spiking suggesting that the gradient updates are not stable enough. Adding a KL divergence penalty might help in controlling the gradient updates. I expected to see changes in the Grad Norm, Entropy and Training Loss curves.
 2. LoRA linear layers - Midway through my experiments, Thinking Machines dropped [this blog on LoRA finetuning](https://thinkingmachines.ai/blog/lora/). Although all other recommendations were in-line with what I had been using, they find applying LoRA to all linear layers learns better than just applying it to the MLP/Attention layers like I did so far.
@@ -343,7 +343,7 @@ I tested two weight values for KL divergence penalty (beta = 1e-4 vs 1e-2). The 
 | 1e-4 | 0.81 | 0.81 | 
 | 1e-2 | 0.85 | 0.85 | 
 
-### All linear layers for LoRA
+### All Linear Layers For LoRA
 I also tried out applying the LoRA adapter for all linear layers with and without a KL divergence penalty. And here surprisingly, the no-KL penalty config outperformed the training run with the KL penalty.
 | KL Setting | LoRA layers | Answer Correctness | Format Correctness |
 |:---:|:---:|:---:|:---:|
@@ -353,7 +353,7 @@ I also tried out applying the LoRA adapter for all linear layers with and withou
 
 I don't have a strong explanation for what's happening here but the KL divergence seems to hurt when applying LoRA to all linear layers.
 
-### So, which is better?
+### So, Which Is Better?
 Although both these modifications, with their best settings achieved the same test accuracy of 85%, looking at the training dynamics, the LoRA training run with selected layers (with `beta=1e-2`) appears more stable. In the graphs shown below, a sudden drop in Grad Norm, Training Accuracy and Training Loss is observed in the all linear layers run after ~40 steps. The output token entropy also reaches a higher peak (~1.3) than the selected layers run (~0.7). Although it is hard to conclude that that the LoRA training run with selected layers run is more stable, I lean towards the selected layers (with `beta=1e-2`) configuration.
 
 | Metric |  Selected LoRA layers (`beta=1e-2`) | All Linear (`beta=0`) | 
