@@ -409,4 +409,4 @@ Here are some resources that helped me along the way.
 3. [Thinking Machines - LoRA Without Regret](https://thinkingmachines.ai/blog/lora/)
 4. [nano-aha-moment](https://github.com/McGill-NLP/nano-aha-moment)
 
-> **Note:** LLM was used in drafting parts of this blog.
+> **Note:** An LLM was used in drafting parts of this blog.
