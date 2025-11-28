@@ -376,7 +376,7 @@ There were also a couple of other side experiments I ran. Their performance wasn
 # What Am I Working With?
 All these experiments were run on a single NVIDIA A40 GPU with 48GB VRAM. The libraries I used were `transformers`, `trl`, `peft`, `vllm` and `tensorboard`. 
 
-# Some Tips I Used To Speed Up Training:
+# Some Tips To Speed Up Training
 - Use `vllm` for generation (`use_vllm=True`)
     - It is way faster compared to the `trl`'s default generation.
     - If you only have 1 GPU like myself, use the collocation option (`vllm_mode="colocate"`) to allow `vllm` to use the same GPU as the `GRPOTrainer`.
@@ -396,13 +396,13 @@ These are things that could improve the performance but I couldnt explore due to
 - Larger Group Size - I was stuck with `num_generations=8` again because of the GPU memory limitations. Maybe setting it to `16` might produce better results.
 - Longer training - I ran the training for each configuration for 24 hours, which allowed around 50 steps. Maybe training for longer helps.
 
-# Conclusion:
+# Conclusion
 With finetuned hyperparameter and training settings, RLVR allowed a 14% improvement in terms of correctness compared to the base model in this toy task. Adding a KL divergence penalty helped with stabilizing the training process. Overall, these experiments gave me a much deeper understanding of the practical intricacies involved in finetuning language models.
 
 <!-- # Acknowledgements:
 A huge thank you to [Raghavendra Kotikalapudi](https://www.linkedin.com/in/raghakot/) for guiding me though these experiments and for sharing valuable insights throughout. I learned a lot from our discussions. -->
 
-# Resources:
+# Resources
 Here are some resources that helped me along the way.
 1. [HuggingFace - Ultra-Scale Playbook](https://huggingface.co/spaces/nanotron/ultrascale-playbook)
 2. [Unsloth - LoRA Hyperparameters Guide](https://docs.unsloth.ai/get-started/fine-tuning-llms-guide/lora-hyperparameters-guide)
