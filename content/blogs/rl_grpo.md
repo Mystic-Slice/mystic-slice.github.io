@@ -335,13 +335,14 @@ A couple of ideas were considered to improve it further:
 2. LoRA linear layers - Midway through my experiments, Thinking Machines dropped [this blog on LoRA finetuning](https://thinkingmachines.ai/blog/lora/). Although all other recommendations were in-line with what I had been using, they find applying LoRA to all linear layers learns better than just applying it to the MLP/Attention layers like I did so far.
 
 ### KL Divergence
-I tested two weight values for KL divergence penalty (beta = 1e-4 vs 1e-2). The larger beta setting worked better and improved from the previous model. There was a 3% improvement in both answer and format correct. Whereas using a smaller beta (1e-4) actually ended up performing almost the same as the previous model.
+I tested three weight values for KL divergence penalty (beta = $10^{-4}$ vs $10^{-2}$ vs $10^{-1}$). The $10^{-2}$ beta setting worked better and improved from the previous model. There was a 3% improvement in both answer and format correct. Whereas using both $10^{-4}$ and $10^{-1}$ actually ended up performing almost the same as the previous model.
 
 | KL Setting | Answer Correctness | Format Correctness |
 |:---:|:---:|:---:|
 | 0 | 0.82 | 0.82 |
-| 1e-4 | 0.81 | 0.81 | 
-| 1e-2 | 0.85 | 0.85 | 
+| $10^{-4}$ | 0.81 | 0.81 | 
+| $10^{-2}$ | 0.85 | 0.85 | 
+| $10^{-1}$ | 0.80 | 0.81 |
 
 ### All Linear Layers For LoRA
 I also tried out applying the LoRA adapter for all linear layers with and without a KL divergence penalty. And here surprisingly, the no-KL penalty config outperformed the training run with the KL penalty.
@@ -349,7 +350,7 @@ I also tried out applying the LoRA adapter for all linear layers with and withou
 |:---:|:---:|:---:|:---:|
 | 0 | Selected | 0.82 | 0.82 |
 | 0 | All-Linear | 0.85 | 0.85 | 
-| 1e-2 | All-Linear | 0.80 | 0.80 | 
+| $10^{-2}$ | All-Linear | 0.80 | 0.80 | 
 
 I don't have a strong explanation for what's happening here but the KL divergence seems to hurt when applying LoRA to all linear layers.
 
@@ -370,7 +371,7 @@ There were also a couple of other side experiments I ran. Their performance wasn
 | Experiment | Description | Answer Correctness | Format Correctness |
 |:---:|:---:|:---:|:---:|
 | 0 | N/A | 0.82 | 0.82 |
-| Higher Learning Rate | Increased Learning Rate (`1e-4`) + KL Divergence Penalty (`beta=1e-4`) | 0.80 | 0.80 | 
+| Higher Learning Rate | Increased Learning Rate ($10^{-4}$) + KL Divergence Penalty (`beta=1e-4`) | 0.80 | 0.80 | 
 | Think tags | Used \<think> tag inplace of \<reasoning> since I see it being used in the reasoning post-training of the latest thinking models. | 0.79 | 0.79 | 
 
 # What Am I Working With?
