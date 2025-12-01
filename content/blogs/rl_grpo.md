@@ -400,7 +400,7 @@ These are things that could improve the performance but I couldnt explore due to
 # Conclusion
 With finetuned hyperparameter and training settings, RLVR allowed a 14% improvement in terms of correctness compared to the base model in this toy task. A major factor is probably the increase in effective batch size as it limits the variance in the gradient updates and stabilizes training. Furthermore, adding a KL divergence penalty helped squeeze that final bit of boost in performance. Overall, these experiments gave me a much deeper understanding of the practical intricacies involved in finetuning language models. I hope to try out a more complex task in the future.
 
-# Acknowledgements:
+# Acknowledgements
 A huge thank you to [Raghavendra Kotikalapudi](https://www.linkedin.com/in/raghakot/) for guiding me though these experiments and for sharing valuable insights throughout. I learned a lot from our discussions. And thank you to [Dr. Mayank Kejriwal](https://viterbi.usc.edu/directory/faculty/Kejriwal/Mayank) for helping me access the compute resources on USC's [CARC](https://www.carc.usc.edu/) without which these experiments would not have been possible.
 
 # Resources
